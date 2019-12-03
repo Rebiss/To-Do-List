@@ -4,19 +4,19 @@ const ToDo = () => {
   const [newTodo, setNewTodo] = useState();
   const [todos, setTodos] = useState([]);
 
-  const handleNewTodoChange = (event) => {
+  const handleNewTodoChange = event => {
     event.preventDefault();
     setNewTodo(event.target.value);
   }
 
-  const handleNewTodo = (event) => {
+  const handleNewTodo = event => {
     event.preventDefault();
     if(newTodo === '') return;
     setTodos([...todos, {id: Date.now(), text: newTodo }]);
     event.target.reset();
   }
 
-  const removeTodo = (id) => {
+  const removeTodo = id => {
     setTodos(todos.filter( todo => todo.id != id ))
   }
 
