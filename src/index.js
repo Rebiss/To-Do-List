@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './assets/index.css';
-import App from './componet/App';
+import ToDo from './componet/ToDo/ToDo';
+import ToDos from './componet/ToDo/ToDos'
 import * as serviceWorker from './service/serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<ToDos />, document.getElementById('root'));
 serviceWorker.unregister();
